@@ -1,0 +1,84 @@
+<html>
+<head>
+<style>
+.container {
+    width: 66%;
+    margin: 0 auto;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#col1 {
+    height: 200px;
+    background: tomato;
+    width: 60%;
+    float: left;
+}
+
+#col2 {
+    height: 200px;
+    background: steelblue;
+    width: 30%;
+    float: left;
+}
+
+#col3 {
+    height: 200px;
+    background: limegreen;
+    width: 10%;
+    float: left;
+}
+
+@media screen and (max-width: 780px) {
+        #col1 {
+        width: 65%;
+    }
+
+    #col2 {
+        width: 35%;
+    }
+
+    #col3 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+        #col1 {
+        width: 100%;
+    }
+
+    #col2 {
+        width: 100%;
+    }
+
+    #col3 {
+        width: 100%;
+    }
+}
+</style>
+<script>
+window.onresize=function(){
+document.getElementById("size").innerHTML=window.innerWidth;
+
+}
+</script>
+</head>
+
+<body>
+        <section class="container">
+            <div id="col1">First column</div>
+            <div id="col2">Second column</div>
+            <div id="col3">Third column</div>
+            <div class="clearfix"></div>
+        </section>
+   Window Size: <span id="size"></span>px</p>
+
+</body>
+  
+  
+  
+</body>
+</html>
